@@ -1,4 +1,4 @@
-import { ExternalLink, Github } from 'lucide-react'
+import { ExternalLink, GitFork } from 'lucide-react'
 
 const projects = [
   {
@@ -83,8 +83,9 @@ export default function Projects() {
               </div>
               <div className="flex gap-4">
                 <a href={project.code} className="text-sm flex items-center gap-1 hover:text-orange transition">
-                  <Github size={16} /> Code
+                  <GitFork size={16} /> Code
                 </a>
+                
                 {project.live && (
                   
                    <a href={project.live}
