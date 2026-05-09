@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  --color-orange: #f97316;
+  --color-orange-dark: #ea580c;
+}
+
+@layer utilities {
+  .fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .fade-up-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
