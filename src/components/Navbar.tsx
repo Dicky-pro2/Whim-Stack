@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Menu, X, Sun, Moon } from 'lucide-react'
+//import WhimStackLogo from '/WhimStackLogo.png'
 
 const navItems = ['Work', 'Services', 'Stack', 'Contact']
 

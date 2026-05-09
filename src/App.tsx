@@ -7,6 +7,7 @@ import Projects from './components/Projects'
 import Stack from './components/Stack'
 import Testimonials from './components/Testimonials'
 import Contact from './components/Contact'
+import WhatsAppButton from './components/WhatsAppButton'
 
 function App() {
   useEffect(() => {
@@ -37,6 +38,7 @@ function App() {
         <Testimonials />
         <Contact />
       </main>
+      <WhatsAppButton />
     </div>
   )
 }
