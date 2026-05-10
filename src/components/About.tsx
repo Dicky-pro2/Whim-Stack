@@ -62,7 +62,7 @@ export default function About() {
               {/* Floating experience badge */}
               <div className="absolute -bottom-5 -right-5 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-2xl px-5 py-4 shadow-lg">
                 <div className="text-2xl font-bold tracking-tighter text-gray-900 dark:text-white">
-                  2+
+                  3+
                 </div>
                 <div className="text-xs tracking-widest uppercase text-gray-500 dark:text-gray-400 mt-0.5">
                   Yrs Experience
