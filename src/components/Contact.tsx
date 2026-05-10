@@ -16,7 +16,7 @@ export default function Contact() {
             </div>
             <div className="flex items-center gap-4 p-4 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
               <MessageCircle className="text-orange" />
-              <span>+234 (0) 123 456 7890</span>
+              <span>+234 (0) 916 286 9066</span>
             </div>
             <div className="flex items-center gap-4 p-4 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
               <MapPin className="text-orange" />
