@@ -57,7 +57,7 @@ export default function Hero() {
                 className="inline-flex items-center justify-center gap-2 bg-orange hover:bg-orange-dark text-white px-8 py-3.5 rounded-full font-medium transition-all hover:scale-105"
               >
                 Contact me
-                <ArrowRight size={16} />
+                <MessageCircle size={16} />
               </a>
 
               <div className="inline-flex items-center gap-2 text-[0.7rem] tracking-[0.1em] uppercase font-medium text-gray-600 dark:text-[#A09B92] border border-gray-300 dark:border-white/[0.12] px-4 py-3 rounded-full">
