@@ -61,45 +61,83 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-24 px-6 bg-gray-50 dark:bg-gray-900/30">
+    <section id="projects" className="py-32 px-6 bg-white dark:bg-[#090909]">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16 fade-up">
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tighter mb-4">FEATURED WORK</h2>
-          <p className="text-gray-600 dark:text-gray-400">Real projects, real impact</p>
+
+        {/* Section heading */}
+        <div className="fade-up mb-20">
+          <span className="text-[0.75rem] tracking-[0.15em] uppercase font-semibold text-orange dark:text-[#FF5C2B] mb-4 inline-block">
+            ✦ WORK
+          </span>
+          <h2
+            style={{ fontFamily: "'Playfair Display', serif" }}
+            className="text-5xl md:text-6xl font-bold italic text-gray-900 dark:text-[#F2EDE4] mb-6"
+          >
+            Featured Projects
+          </h2>
+          <p className="text-lg text-gray-600 dark:text-gray-400">
+            Real projects, real impact
+          </p>
         </div>
+
+        {/* Projects grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, idx) => (
             <div
               key={idx}
-              className="fade-up group bg-white dark:bg-gray-900 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all hover:-translate-y-2 border border-gray-200 dark:border-gray-800 hover:border-orange"
+              className="fade-up group bg-white dark:bg-[#111111] rounded-2xl p-8 border border-gray-200 dark:border-white/[0.08] hover:border-orange dark:hover:border-[#FF5C2B] transition-all duration-200 hover:-translate-y-2 hover:shadow-lg dark:hover:shadow-[0_8px_40px_rgba(255,92,43,0.1)]"
             >
-              <div className="text-sm text-orange font-medium mb-2 uppercase tracking-wide">{project.category}</div>
-              <h3 className="text-xl font-bold mb-2">{project.name}</h3>
-              <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">{project.desc}</p>
-              <div className="flex flex-wrap gap-2 mb-4">
+              {/* Category tag */}
+              <div className="text-[0.65rem] text-orange dark:text-[#FF5C2B] font-semibold mb-3 uppercase tracking-[0.12em]">
+                {project.category}
+              </div>
+
+              {/* Project name */}
+              <h3 className="text-xl font-bold text-gray-900 dark:text-[#F2EDE4] mb-3">
+                {project.name}
+              </h3>
+
+              {/* Description */}
+              <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-5">
+                {project.desc}
+              </p>
+
+              {/* Tags */}
+              <div className="flex flex-wrap gap-2 mb-6">
                 {project.tags.map((tag, i) => (
-                  <span key={i} className="text-xs bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded-full">{tag}</span>
+                  <span
+                    key={i}
+                    className="text-[0.65rem] tracking-[0.08em] uppercase font-medium bg-gray-100 dark:bg-white/[0.05] text-gray-700 dark:text-gray-400 px-2.5 py-1.5 rounded-full border border-gray-200 dark:border-white/[0.08]"
+                  >
+                    {tag}
+                  </span>
                 ))}
               </div>
-              <div className="flex gap-4">
-                <a href={project.code} className="text-sm flex items-center gap-1 hover:text-orange transition">
-                  <GitFork size={16} /> Code
-                </a>
+
+              {/* Links */}
+              <div className="flex gap-5 pt-4 border-t border-gray-200 dark:border-white/[0.08]">
                 
+                 <a href={project.code}
+                  className="text-[0.7rem] tracking-[0.08em] uppercase font-semibold flex items-center gap-1.5 text-gray-600 dark:text-gray-400 hover:text-orange dark:hover:text-[#FF5C2B] transition-colors duration-200"
+                >
+                  <GitFork size={14} /> Code
+                </a>
+
                 {project.live && (
                   
                    <a href={project.live}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm flex items-center gap-1 hover:text-orange transition"
+                    className="text-[0.7rem] tracking-[0.08em] uppercase font-semibold flex items-center gap-1.5 text-gray-600 dark:text-gray-400 hover:text-orange dark:hover:text-[#FF5C2B] transition-colors duration-200"
                   >
-                    <ExternalLink size={16} /> Live Demo
+                    <ExternalLink size={14} /> Live Demo
                   </a>
                 )}
               </div>
             </div>
           ))}
         </div>
+
       </div>
     </section>
   )
