@@ -1,0 +1,13 @@
+// public/robots.txt
+User-agent: *
+Allow: /
+Disallow: /private/
+
+Sitemap: https://whimstack.com/sitemap.xml
+
+# Block bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /

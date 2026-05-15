@@ -8,6 +8,9 @@ import Stack from './components/Stack'
 import Testimonials from './components/Testimonials'
 import Contact from './components/Contact'
 import WhatsAppButton from './components/WhatsAppButton'
+import { pages } from './utils/seo'
+import SEO from './components/SEO'
+import { HelmetProvider } from 'react-helmet-async'
 
 function App() {
   useEffect(() => {
@@ -28,6 +31,8 @@ function App() {
 
   return (
     <div className="bg-white dark:bg-black text-gray-900 dark:text-white transition-colors duration-300">
+      <HelmetProvider>
+      <SEO title={pages.home.title} description={pages.home.description} pathname="/" />
       <Navbar />
       <main>
         <Hero />
@@ -39,6 +44,9 @@ function App() {
         <Contact />
       </main>
       <WhatsAppButton />
+        
+      {/* Your components */}
+    </HelmetProvider>
     </div>
   )
 }
